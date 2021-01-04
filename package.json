@@ -1,0 +1,16 @@
+{
+  "name": "railroad-ink-dice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "devDependencies": {
+	"parcel-bundler": "^1.12.4"
+  }
+}
