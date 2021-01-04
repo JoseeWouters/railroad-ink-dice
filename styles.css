@@ -1,3 +1,65 @@
+html {
+	height: calc(100vh - 1em);
+}
+
+body {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.dices {
+	display: flex;
+	gap: 1em;
+}
+
+.dice {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 2px solid black;
+	border-radius: 5px;
+	width: 8em;
+	height: 8em;
+	position: relative;
+	box-shadow: 0px 8px 6px -3px rgba(0,0,0,0.25);
+	overflow: hidden;
+}
+
 .dice__side {
 	display: none;
+	margin: 0;
+}
+
+.dice__side--1,
+.dice__side--2 {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.dice__side--1 svg {
+	width: 4.5em;
+	height: 4.5em;
+}
+
+.button {
+	margin-top: 3em;
+	border: 2px solid black;
+	border-radius: 5px;
+	padding: 0.5em 1em 0;
+	background: white;
+	box-shadow: 3px 3px 10px 0px rgba(0,0,0,0.25);
+}
+
+.button svg {
+	width: 5em;
+	height: 5em;
+}
+
+.credits {
+	text-align: center;
+	font-family: sans-serif;
 }

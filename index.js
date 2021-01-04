@@ -11,3 +11,7 @@ rollDices = () => {
 		diceSide.style.display = "block";
 	});
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+	rollDices();
+});
