@@ -1,3 +1,20 @@
+:root {
+	--background-color: #ffffff;
+	--text-color: #3e3e3e;
+}
+
+[data-theme="dark"] {
+	--background-color: #121212;
+	--text-color: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--background-color: #121212;
+		--text-color: #ffffff;
+	}
+}
+
 html {
 	height: calc(100vh - 1em);
 }
@@ -8,18 +25,31 @@ body {
 	flex-direction: column;
 	justify-content: space-evenly;
 	align-items: center;
+	text-align: center;
+	font-family: sans-serif;
+	color: var(--text-color);
+	background-color: var(--background-color);
+	transition: all 0.25s ease-in-out;
+}
+
+a {
+	color: inherit;
 }
 
 .dices {
-	display: flex;
-	gap: 1em;
+	display: grid;
+	grid-template-columns: repeat(auto-fill,minmax(8em,1fr));
+	grid-gap: 1em;
+	justify-items: center;
+	width: 40em;
+	max-width: 100%;
 }
 
 .dice {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	border: 2px solid black;
+	border: 2px solid var(--text-color);
 	border-radius: 5px;
 	width: 8em;
 	height: 8em;
@@ -87,21 +117,27 @@ body {
 	top: 0;
 }
 
-.button {
-	margin-top: 3em;
-	border: 2px solid black;
+button {
+	border: 2px solid var(--text-color);
 	border-radius: 5px;
-	padding: 0.5em 1em 0;
-	background: white;
+	margin-top: 1em;
+	padding: 0.5em 1em;
+	background-color: var(--background-color);
 	box-shadow: 3px 3px 10px 0px rgba(0,0,0,0.25);
+	font-size: inherit;
+	font-family: inherit;
+	color: inherit;
 }
 
-.button svg {
-	width: 5em;
-	height: 5em;
+.theme-toggle {
+	position: absolute;
+	top: 0;
+	right: 1em;
+	border: 1px solid var(--text-color);
+	padding: 0.2em;
+
 }
 
 .credits {
 	text-align: center;
-	font-family: sans-serif;
 }
