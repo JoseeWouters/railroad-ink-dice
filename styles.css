@@ -129,13 +129,16 @@ button {
 	color: inherit;
 }
 
-.theme-toggle {
+.toggles {
 	position: absolute;
 	top: 0;
 	right: 1em;
-	border: 1px solid var(--text-color);
-	padding: 0.2em;
+}
 
+.toggles button {
+	border: 1px solid var(--text-color);
+	padding: 0.5em;
+	font-size: 0.8em;
 }
 
 .credits {
