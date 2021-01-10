@@ -34,15 +34,54 @@ body {
 }
 
 .dice__side--1,
-.dice__side--2 {
+.dice__side--2,
+.dice__side--5 {
 	position: absolute;
 	top: 0;
 	left: 0;
 }
 
+.dice__side--4 {
+	position: absolute;
+	top: -3px;
+	left: 0;
+}
+
+.dice__side--6 {
+	position: absolute;
+	top: 45%;
+}
+
 .dice__side--1 svg {
 	width: 4.5em;
 	height: 4.5em;
+}
+
+.dice__side--4 svg {
+	width: 5em;
+	height: 5em;
+}
+
+.dice--crossroads .dice__side--1 svg,
+.dice--crossroads .dice__side--4 svg {
+	width: 8em;
+	height: 8em;
+}
+
+.dice--crossroads .dice__side--4 {
+	top: 0;
+}
+
+.dice--crossroads .dice__side--2,
+.dice--crossroads .dice__side--5 {
+	width: 4.5em;
+}
+
+.dice--crossroads .dice__side--3,
+.dice--crossroads .dice__side--6 {
+	width: 1.15em;
+	position: absolute;
+	top: 0;
 }
 
 .button {
