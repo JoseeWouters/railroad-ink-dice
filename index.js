@@ -1,5 +1,13 @@
 let reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-let showAnimations = reducedMotion === false;
+let showAnimations = Boolean;
+
+startWithAnimations = () => {
+	let button = document.querySelector(".toggle--animations");	
+	if (typeof(button.animate) !== "function") {
+		button.disabled = true;
+		return showAnimations = false;
+	}
+}
 
 toggleAnimations = () => {
 	showAnimations = !showAnimations;
@@ -64,5 +72,6 @@ const animate = [
 ];
 
 document.addEventListener("DOMContentLoaded", function() {
+	startWithAnimations();
 	rollDice();
 });
